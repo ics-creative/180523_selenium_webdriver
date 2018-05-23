@@ -3,15 +3,15 @@ const assert = require('assert');
 
 let driver;
 
-describe('入力フォーム デモ', function () {
-  before(function () {
+describe('入力フォーム デモ', () => {
+  before(() => {
     driver = new Builder()
       .forBrowser('chrome')
       .build();
     process.on('unhandledRejection', console.dir);
   });
 
-  after(function () {
+  after(() => {
     return driver.quit();
   });
 
