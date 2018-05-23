@@ -1,0 +1,2 @@
+# 180523_selenium_webdriver
+「UIテストの自動化！ Node.jsとSeleniumでWebアプリのUIテスト環境構築」のデモコードです。selenium webdriverを利用してテストコードのサンプルを用意しています。
