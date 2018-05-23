@@ -17,7 +17,7 @@ describe('入力フォーム デモ', function () {
 
   it('名前欄の必須入力チェック その1', async () => {
     // テスト対象のページへアクセス
-    await driver.get('http://ics-drive.jp/sandbox/demo/demo.html');
+    await driver.get('https://ics-creative.github.io/180523_selenium_webdriver/');
 
     // 何も入力せずにSubmitする
     await driver.findElement(By.id('submitButton')).click();
@@ -29,7 +29,7 @@ describe('入力フォーム デモ', function () {
 
   it('名前欄の必須入力チェック その2', async () => {
     // テスト対象のページへアクセス
-    await driver.get('http://ics-drive.jp/sandbox/demo/demo.html');
+    await driver.get('https://ics-creative.github.io/180523_selenium_webdriver/');
 
     // 名前を入力してSubmitする
     await driver.findElement(By.id('name')).sendKeys('品川太郎');
