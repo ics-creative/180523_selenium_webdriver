@@ -1,10 +1,11 @@
 {
-  "name": "selenium-media-demo",
   "devDependencies": {
     "mocha": "^5.2.0",
     "selenium-webdriver": "^4.0.0-alpha.1"
   },
   "scripts": {
     "test": "mocha formTest.js --timeout 10000"
-  }
+  },
+  "license": "MIT",
+  "private": true
 }
