@@ -1,10 +1,10 @@
 {
   "devDependencies": {
-    "mocha": "^10.2.0",
+    "jest": "^29.3.1",
     "selenium-webdriver": "^4.7.1"
   },
   "scripts": {
-    "test": "mocha formTest.js --timeout 10000"
+    "test": "jest"
   },
   "license": "MIT",
   "private": true
