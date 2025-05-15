@@ -1,16 +1,16 @@
-const { Builder, By } = require("selenium-webdriver");
-const assert = require("assert");
+import { Builder, By } from "selenium-webdriver";
+import { describe, beforeAll, afterAll, test, expect } from "vitest";
 
 let driver;
 
 describe("入力フォーム デモ", () => {
   // テスト開始前にドライバーを起動
-  beforeAll(() => {
+  beforeAll(async () => {
     driver = new Builder().forBrowser("chrome").build();
   });
 
   // テスト終了後にドライバーを終了
-  afterAll(() => driver.quit());
+  afterAll(async () => await driver.quit());
 
   test("名前欄の必須入力チェック その1", async () => {
     // テスト対象のページへアクセス
@@ -21,7 +21,7 @@ describe("入力フォーム デモ", () => {
 
     // エラーメッセージを取得して、エラー文言が正しいかチェックする
     const errorMessage = await driver.findElement(By.id("error_name")).getText();
-    assert.equal(errorMessage, "名前を入力してください。");
+    expect(errorMessage).toBe("名前を入力してください。");
   });
 
   test("名前欄の必須入力チェック その2", async () => {
@@ -34,6 +34,6 @@ describe("入力フォーム デモ", () => {
 
     // エラーメッセージを取得して、エラー文言が空であるかチェックする
     const errorMessage = await driver.findElement(By.id("error_name")).getText();
-    assert.equal(errorMessage, "");
+    expect(errorMessage).toBe("");
   });
 });
